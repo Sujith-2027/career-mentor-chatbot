@@ -1,0 +1,41 @@
+/* ── Design tokens ───────────────────────────────────────────────── */
+:root {
+  --bg:        #0a0c10;
+  --bg2:       #111520;
+  --bg3:       #181d2a;
+  --border:    #252c3f;
+  --accent:    #4f8aff;
+  --accent2:   #00d4aa;
+  --accent3:   #ff6b6b;
+  --text:      #e8eaf0;
+  --text2:     #8b93a8;
+  --text3:     #555f78;
+  --radius:    14px;
+  --radius-sm: 8px;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Utilities ───────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+}

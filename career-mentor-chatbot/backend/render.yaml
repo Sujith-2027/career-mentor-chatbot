@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: career-mentor-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false          # Set in Render dashboard
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: FAISS_INDEX_PATH
+        value: /var/data/faiss_index
+      - key: CORS_ORIGINS
+        value: https://career-mentor-frontend.onrender.com
+    disk:
+      name: faiss-storage
+      mountPath: /var/data
+      sizeGB: 1

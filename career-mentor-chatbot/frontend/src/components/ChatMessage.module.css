@@ -1,0 +1,76 @@
+.wrapper {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  animation: fadeIn .25s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+.user { flex-direction: row-reverse; }
+
+.avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--bg3); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0; margin-top: 2px;
+}
+.userAvatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+  font-size: .7rem; font-weight: 700; color: #fff;
+  flex-shrink: 0; margin-top: 2px; font-family: var(--font-head);
+}
+
+.bubble {
+  max-width: min(680px, 82%);
+  padding: .85rem 1.1rem;
+  border-radius: var(--radius);
+  font-size: .92rem;
+  line-height: 1.65;
+}
+.assistant .bubble {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.user .bubble {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+
+.para { margin-bottom: .6rem; }
+.para:last-child { margin-bottom: 0; }
+.list { margin: .4rem 0 .6rem 1.2rem; }
+.listItem { margin-bottom: .25rem; }
+.h1 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: .6rem; }
+.h2 { font-family: var(--font-head); font-size: 1.05rem; margin: .8rem 0 .4rem; }
+.h3 { font-family: var(--font-head); font-size: .95rem; margin: .6rem 0 .3rem; }
+.strong { color: var(--accent); font-weight: 600; }
+.user .strong { color: rgba(255,255,255,.9); }
+
+.inlineCode {
+  background: rgba(79,138,255,.15);
+  color: var(--accent);
+  border-radius: 4px;
+  padding: .1rem .35rem;
+  font-size: .85rem;
+}
+.codeBlock {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .75rem 1rem;
+  overflow-x: auto;
+  font-size: .82rem;
+  margin: .5rem 0;
+}
+
+.sources {
+  margin-top: .75rem;
+  padding-top: .6rem;
+  border-top: 1px solid var(--border);
+  font-size: .75rem;
+  color: var(--text3);
+}
