@@ -1,6 +1,6 @@
 # 🎓 AI Career Mentor Chatbot
 
-An AI-powered career guidance platform for students and fresh graduates, built with **FastAPI**, **LangChain**, **FAISS**, and **React**.
+An AI-powered career guidance platform for students and fresh graduates, built with **FastAPI**, **LangChain**, **FAISS**, and **React**
 
 ---
 
